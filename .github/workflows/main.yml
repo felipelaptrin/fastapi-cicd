@@ -4,7 +4,24 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  check:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Setup Python 3
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.9'
+          
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Setup Database
+        run: make setup
+
+      - name: Run tests
+        run: make test
+        
