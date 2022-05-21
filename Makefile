@@ -6,3 +6,6 @@ run:
 
 tear_down:
 	@docker-compose down
+
+test:
+	@pytest
