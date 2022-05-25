@@ -6,8 +6,8 @@ class User(Model):
     id = AutoField()
     first_name = CharField(50)
     last_name = CharField(50)
-    email = CharField(50)
-    is_active = BooleanField(50)
+    email = CharField(50, null=True)
+    is_active = BooleanField()
     
     class Meta:
         database = db
