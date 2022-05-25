@@ -1,5 +1,5 @@
 setup:
-	@docker-compose up
+	@docker-compose up -d --build
 
 run:
 	@uvicorn api.main:app --reload
