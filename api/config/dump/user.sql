@@ -1,9 +1,10 @@
 create table user (
-	id INT,
+	id INT AUTO_INCREMENT,
 	first_name VARCHAR(50),
 	last_name VARCHAR(50),
 	email VARCHAR(50),
-	is_active VARCHAR(50)
+	is_active VARCHAR(50),
+	PRIMARY KEY (id)
 );
 insert into user (id, first_name, last_name, email, is_active) values (1, 'Nannette', 'Kiefer', 'nkiefer0@imageshack.us', false);
 insert into user (id, first_name, last_name, email, is_active) values (2, 'Vina', 'Finneran', 'vfinneran1@i2i.jp', false);
